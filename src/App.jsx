@@ -73,6 +73,59 @@ function Hero() {
   );
 }
 
+function ScrollSpyNav() {
+  const sections = ["intro", "about", "stack", "values", "projects", "contact", "download"];
+  const [active, setActive] = React.useState("intro");
+
+  React.useEffect(() => {
+    const observers = [];
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActive(id);
+          }
+        },
+        { threshold: 0.4 }
+      );
+
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((obs) => obs.disconnect());
+  }, []);
+
+  return (
+    <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col items-center space-y-4 z-50">
+      {sections.map((id) => (
+        <a key={id} href={`#${id}`} className="group relative">
+          <motion.span
+            className="block w-2.5 h-2.5 rounded-full bg-gray-500 group-hover:bg-pink-400 transition-colors duration-300"
+            animate={{
+              scale: active === id ? 1.6 : 1,
+              backgroundColor: active === id ? "#f472b6" : "#6b7280",
+              boxShadow:
+                active === id
+                  ? "0 0 8px rgba(244, 114, 182, 0.6)"
+                  : "none",
+            }}
+            transition={{ duration: 0.25 }}
+          />
+          <span className="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 bg-gray-900/80 text-white px-2 py-1 rounded text-xs transition">
+            {id.charAt(0).toUpperCase() + id.slice(1)}
+          </span>
+        </a>
+      ))}
+    </div>
+  );
+}
+
+
 function TechBadge({ src, alt }) {
   return <img src={src} alt={alt} className="h-8 object-contain" loading="lazy" />;
 }
@@ -844,6 +897,7 @@ export default function App() {
       </div>
 
       <Navbar />
+      
       
       <main className="max-w-6xl mx-auto px-4 pt-28 pb-16 space-y-14 relative z-10">
         <Hero />
