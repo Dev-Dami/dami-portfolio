@@ -862,14 +862,15 @@ export default function App() {
             </h2>
             <div className="space-y-4 text-gray-300">
               <p className="text-lg leading-relaxed">
-                I'm <span className="text-pink-400 font-medium">Damilare Osibanjo</span>, a passionate programmer with expertise spanning quantitative finance, cybersecurity, and full-stack development. I thrive at the intersection of low-level systems, modern web stacks, and data science pipelines.
+                I'm <span className="text-pink-400 font-medium">Damilare Osibanjo</span>, a passionate programmer fascinated by quantitative finance, cybersecurity, and full-stack development. I thrive on solving complex problems and building robust systems, working comfortably across low-level programming, modern web technologies, and data science pipelin
               </p>
               <p className="text-lg leading-relaxed">
                 My work focuses on building secure, high-performance systems while solving complex problems through data analysis and algorithmic thinking.
               </p>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 border border-white/10">
-                <span className="w-2 h-2 rounded-full bg-pink-500 mr-2 animate-pulse"></span>
-                <span>16 y/o • Final year at Yeshua High School, Nigeria</span>
+              <span className="w-2 h-2 rounded-full bg-pink-500 mr-2 hover:animate-pulse"></span>
+              <span>16 y/o • Final year at Yeshua High School, Nigeria</span>
+
               </div>
             </div>
           </div>
