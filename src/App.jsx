@@ -24,19 +24,42 @@ function Navbar() {
       className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-gray-900/60 border-b border-pink-300/10 shadow-lg"
     >
       <div className="max-w-6xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <div className="flex space-x-1.5">
-            <span className="w-3 h-3 rounded-full bg-pink-400 shadow-sm shadow-pink-400/30" />
-            <span className="w-3 h-3 rounded-full bg-yellow-400/80 shadow-sm shadow-yellow-400/20" />
-            <span className="w-3 h-3 rounded-full bg-green-400/70 shadow-sm shadow-green-400/20" />
-          </div>
-          <a href="#intro" className="text-pink-300 font-semibold text-lg md:text-xl select-none">Damilare Osibanjo</a>
-        </div>
-        <nav className="hidden md:flex gap-6 text-sm text-gray-300">
+        {/* Left side */}
+<div className="flex items-center gap-4">
+  <div className="flex space-x-1.5 items-center">
+    {[
+      "bg-pink-400 shadow-sm shadow-pink-400/30",
+      "bg-yellow-400/80 shadow-sm shadow-yellow-400/20",
+      "bg-green-400/70 shadow-sm shadow-green-400/20"
+    ].map((color, i) => (
+      <motion.span
+        key={i}
+        className={`w-3 h-3 rounded-full ${color}`}
+        animate={{ y: [0, -5, 0] }}
+        transition={{
+          duration: 0.6,
+          repeat: Infinity,
+          repeatType: "loop",
+          delay: i * 0.15
+        }}
+      />
+    ))}
+  </div>
+
+  <a
+    href="#intro"
+    className="text-pink-300 font-semibold text-lg md:text-xl select-none hover:text-pink-400 transition duration-200"
+  >
+    Damilare Osibanjo
+  </a>
+</div>
+
+        {/* Right side */}
+        <nav className="hidden md:flex gap-6 text-sm text-gray-300 gap-4">
           <a href="#intro" className="hover:text-pink-400 transition">Home</a>
           <a href="#about" className="hover:text-pink-400 transition">About</a>
           <a href="#stack" className="hover:text-pink-400 transition">Tech-Stack</a>
-          <a href="#values" class="hover:text-pink-400 transition duration-200">Values</a>
+          <a href="#values" className="hover:text-pink-400 transition duration-200">Values</a>
           <a href="#projects" className="hover:text-pink-400 transition">Projects</a>
           <a href="#contact" className="hover:text-pink-400 transition">Contact</a>
           <a href="#download" className="hover:text-pink-400 transition">Résumé</a>
@@ -45,7 +68,6 @@ function Navbar() {
     </motion.header>
   );
 }
-
 function Hero() {
   return (
     <motion.section
@@ -413,22 +435,57 @@ function TechStack() {
           className="text-center mb-16"
           variants={itemVariants}
         >
-          <motion.h2 
-            className="text-4xl md:text-5xl bg-clip-text text-xl font-semibold border-b border-white/10 pb-2 mb-4"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Technical Stack
-          </motion.h2>
-          <motion.p 
-            className="text-lg text-gray-300 max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-          >
-            Technical Stack
-          </motion.p>
+          <motion.h2
+  className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-6"
+  variants={{
+    hidden: { opacity: 0, y: -30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.6, 
+        ease: [0.34, 1.56, 0.64, 1],
+        damping: 10
+      }
+    }
+  }}
+  initial="hidden"
+  animate="visible"
+  aria-label="Technical Stack"
+>
+  Technical Stack
+  <motion.div 
+    className="h-1 mt-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"
+    initial={{ scaleX: 0, originX: 0 }}
+    animate={{ scaleX: 1 }}
+    transition={{ 
+      delay: 0.3, 
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1]
+    }}
+    aria-hidden="true"
+  />
+</motion.h2>
+
+<motion.p 
+  className="text-xl md:text-2xl text-gray-300/90 mb-8 leading-relaxed max-w-3xl mx-auto content-center"
+  variants={{
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { 
+        duration: 0.5,
+        delay: 0.2,
+        ease: "circOut"
+      }
+    }
+  }}
+  initial="hidden"
+  animate="visible"
+>
+  Technologies used in my projects
+</motion.p>
         </motion.div>
 
         <motion.div 
