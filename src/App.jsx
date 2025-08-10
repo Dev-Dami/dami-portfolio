@@ -82,36 +82,36 @@ function Projects() {
     {
       title: "WindowsPortfolio",
       description: "A portfolio website that emulates Windows 10, easy to configure for users with minimal coding experience.",
-      link: "https://github.com/NulledGarp/Portfolio",
+      link: "https://github.com/Dev-Dami/Portfolio",
       demo: null,
-      tags: ["React", "Windows UI", "Customizable"]
+      tags: ["Angular", "Windows UI", "Customizable", "Portfolio", "Typescript" ]
     },
     { 
       title: "C Text Editor", 
       description: "A simple Windows text editor in pure C using Win32 API with features like syntax highlighting, caret navigation, and word count.", 
-      link: "https://github.com/NulledGarp/C-project-Text-Editor",
+      link: "https://github.com/Dev-Dami/C-project-Text-Editor",
       demo: null,
       tags: ["C", "Win32 API", "Text Processing"]
     },
     { 
       title: "Yeshua Chat Assistant", 
       description: "A real-time school chatbot built with Node.js, Express, and Socket.IO. Dynamic AI responses and Markdown-like formatting.", 
-      link: "https://github.com/NulledGarp/ChatAssistant",
+      link: "https://github.com/Dev-Dami/ChatAssistant",
       demo: null,
       tags: ["Node.js", "Socket.IO", "AI"]
     },
     { 
       title: "Todo-Cli", 
       description: "A simple command-line to-do manager built in Go using the Cobra library.", 
-      link: "https://github.com/NulledGarp/todocli",
+      link: "https://github.com/Dev-Dami/todocli",
       demo: null,
       tags: ["Go", "CLI", "Productivity"]
     },
     { 
       title: "Sonic-Runner", 
       description: "A fast-paced runner game inspired by Sonic, built with TypeScript using the kaplay library and Vite.", 
-      link: "https://github.com/NulledGarp/Sonic-Runner",
-      demo: "https://nulledgarp.github.io/Sonic-Runner/",
+      link: "https://github.com/Dev-Dami/Sonic-Runner",
+      demo: "https://Dev-Dami.github.io/Sonic-Runner/",
       tags: ["TypeScript", "Game Dev", "Vite"]
     },
   ];
@@ -695,7 +695,7 @@ function Contact() {
                   Email Me
                 </a>
                 <a 
-                  href="https://github.com/NulledGarp" 
+                  href="https://github.com/Dev-Dami" 
                   target="_blank" 
                   rel="noreferrer"
                   className="flex-1 border border-white/20 hover:border-pink-400/50 text-white font-medium py-3 px-6 rounded-full text-center transition-all duration-300 hover:bg-white/5"
@@ -761,7 +761,7 @@ function Contact() {
                   
                   <li className="group">
                     <a 
-                      href="https://github.com/NulledGarp" 
+                      href="https://github.com/Dev-Dami" 
                       target="_blank" 
                       rel="noopener"
                       className="flex items-center gap-4 p-4 bg-gray-800 hover:bg-gray-700 rounded-xl transition-all duration-300"
@@ -773,7 +773,7 @@ function Contact() {
                       </div>
                       <div>
                         <p className="text-white font-medium">GitHub</p>
-                        <p className="text-sm text-gray-400">github.com/NulledGarp</p>
+                        <p className="text-sm text-gray-400">github.com/Dev-Dami</p>
                       </div>
                       <svg className="ml-auto w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
