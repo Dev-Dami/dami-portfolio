@@ -868,7 +868,7 @@ export default function App() {
                 My work focuses on building secure, high-performance systems while solving complex problems through data analysis and algorithmic thinking.
               </p>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 border border-white/10">
-              <span className="w-2 h-2 rounded-full bg-pink-500 mr-2 hover:animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-pink-500 mr-2 transition-transform duration-300 hover:scale-125 hover:animate-pulse"></span>
               <span>16 y/o • Final year at Yeshua High School, Nigeria</span>
 
               </div>
