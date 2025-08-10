@@ -838,30 +838,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-black text-white antialiased">
-      {/* Background video */}
-      <div className="fixed inset-0 -z-20 w-full h-full overflow-hidden pointer-events-none">
-        <video
-          ref={videoRef}
-          id="bg-video"
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          loop
-          muted
-          autoPlay
-          playsInline
-          preload="auto"
-        >
-          <source src={backVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        {/* Subtle gradient overlay */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-black/50 via-purple-900/10 to-black/50"
-          style={{ opacity: overlayOpacity }}
-        />
-      </div>
 
-      {/* Glow effects */}
-      <div className="fixed -z-10 inset-0 overflow-hidden">
+<div className="fixed -z-10 inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-purple-600 rounded-full filter blur-[100px] opacity-20"></div>
         <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-pink-600 rounded-full filter blur-[100px] opacity-20"></div>
       </div>
