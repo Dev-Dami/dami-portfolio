@@ -827,7 +827,7 @@ function Contact() {
                 <ul className="space-y-3">
                   <li className="group">
                     <a 
-                      href="https://www.linkedin.com/in/damilare-osibanjo-92914831b/" 
+                      href="https://www.linkedin.com/in/damilare-osibanjo/" 
                       target="_blank" 
                       rel="noopener"
                       className="flex items-center gap-4 p-4 bg-gray-800 hover:bg-gray-700 rounded-xl transition-all duration-300"
