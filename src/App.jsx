@@ -849,32 +849,35 @@ export default function App() {
         <Hero />
         
         {/* About Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: false, amount: 0.25 , margin: "-100px" }}
-          className="bg-gray-900/60 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
-        >
-          <div id="about" className="space-y-6">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
-              About Me
-            </h2>
-            <div className="space-y-4 text-gray-300">
-              <p className="text-lg leading-relaxed">
-                I'm <span className="text-pink-400 font-medium">Damilare Osibanjo</span>, a passionate programmer fascinated by quantitative finance, cybersecurity, and full-stack development. I thrive on solving complex problems and building robust systems, working comfortably across low-level programming, modern web technologies, and data science pipelin
-              </p>
-              <p className="text-lg leading-relaxed">
-                My work focuses on building secure, high-performance systems while solving complex problems through data analysis and algorithmic thinking.
-              </p>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 border border-white/10">
-              <span className="w-2 h-2 rounded-full bg-pink-500 mr-2 transition-transform duration-300 hover:scale-125 hover:animate-pulse"></span>
-              <span>16 y/o • Final year at Yeshua High School, Nigeria</span>
+ <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: false, amount: 0.25 }} // removed margin for safety
+      className="bg-gray-900/60 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
+    >
+      <div id="about" className="space-y-6">
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
+          About Me
+        </h2>
 
-              </div>
-            </div>
+        <div className="space-y-4 text-gray-300">
+          <p className="text-lg leading-relaxed">
+            I'm <span className="text-pink-400 font-medium">Damilare Osibanjo</span>, a passionate programmer fascinated by quantitative finance, cybersecurity, and full-stack development. I thrive on solving complex problems and building robust systems, working comfortably across low-level programming, modern web technologies, and data science pipelines.
+          </p>
+
+          <p className="text-lg leading-relaxed">
+            My work focuses on building secure, high-performance systems while solving complex problems through data analysis and algorithmic thinking.
+          </p>
+
+          {/* make the container a group so the dot reacts when the whole pill is hovered */}
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 border border-white/10 group cursor-pointer transition-colors duration-200">
+            <span className="w-2.5 h-2.5 rounded-full bg-pink-500 mr-2 transform transition-all duration-300 group-hover:scale-125 group-hover:animate-pulse" />
+            <span>16 y/o • Final year at Yeshua High School, Nigeria</span>
           </div>
-        </motion.section>
+        </div>
+      </div>
+    </motion.section>
 
         <TechStack />
         

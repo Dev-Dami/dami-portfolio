@@ -1,4 +1,10 @@
 @import "tailwindcss";
+@keyframes scalePulse {
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(1.35); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-scale-pulse { animation: scalePulse 900ms ease-in-out infinite; }
 
 @layer base {
   :root {
